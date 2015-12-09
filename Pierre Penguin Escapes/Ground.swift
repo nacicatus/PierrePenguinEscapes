@@ -28,6 +28,13 @@ class Ground: SKSpriteNode, GameSprite {
         
         // repeat the tiles
         createChildren()
+        
+        // solidifying the ground
+        //Note: physics body positions are relative to their nodes.
+        // The top left of the node is X: 0, Y: 0, given our anchor point.
+        // The top right of the node is X: size.width, Y: 0
+        let pointTopRight = CGPoint(x: size.width, y: 0)
+        self.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointZero, toPoint: pointTopRight)
     }
     
     // Build child nodes to repeat the ground texture

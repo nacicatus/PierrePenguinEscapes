@@ -23,6 +23,11 @@ class Bee: SKSpriteNode, GameSprite {
         self.size = size
         self.position = position
         self.runAction(flyAnimation)
+        
+        // Attach a physics body, shaped like a circle, size of bee - and they fall to the ground as if zapped!!
+        self.physicsBody = SKPhysicsBody(circleOfRadius: size.width / 2)
+        // but we don't want them to fall so we eliminate gravity for them :
+        self.physicsBody?.affectedByGravity = false
     }
     
     // Our bee only implements one texture based animation but other classes may be more complicated

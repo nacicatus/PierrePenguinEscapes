@@ -43,6 +43,9 @@ class GameScene: SKScene {
         // spawn the player
         player.spawn(world, position: CGPoint(x: 150, y: 250))
         
+        
+        // bee crash test
+        bee2.physicsBody?.applyImpulse(CGVector(dx: -3, dy: 0))
     }
     
     
