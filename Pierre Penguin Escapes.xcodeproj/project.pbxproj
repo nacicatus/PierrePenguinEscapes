@@ -20,6 +20,8 @@
 		F8C6653C1C181EA800859663 /* Bee.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6653B1C181EA800859663 /* Bee.swift */; };
 		F8C6653E1C1823F700859663 /* ground.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F8C6653D1C1823F700859663 /* ground.atlas */; };
 		F8C665401C18240D00859663 /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6653F1C18240D00859663 /* Ground.swift */; };
+		F8C665441C18381900859663 /* pierre.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F8C665431C18381900859663 /* pierre.atlas */; };
+		F8C665461C18382B00859663 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C665451C18382B00859663 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,11 +56,13 @@
 		F8C665231C17F00100859663 /* Pierre Penguin EscapesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pierre Penguin EscapesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C665271C17F00100859663 /* Pierre_Penguin_EscapesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pierre_Penguin_EscapesUITests.swift; sourceTree = "<group>"; };
 		F8C665291C17F00100859663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8C665371C18063B00859663 /* bee.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = bee.atlas; sourceTree = "<group>"; };
+		F8C665371C18063B00859663 /* bee.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = bee.atlas; path = ../bee.atlas; sourceTree = "<group>"; };
 		F8C665391C181E2F00859663 /* GameSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSprite.swift; sourceTree = "<group>"; };
 		F8C6653B1C181EA800859663 /* Bee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bee.swift; sourceTree = "<group>"; };
-		F8C6653D1C1823F700859663 /* ground.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ground.atlas; sourceTree = "<group>"; };
+		F8C6653D1C1823F700859663 /* ground.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = ground.atlas; path = ../ground.atlas; sourceTree = "<group>"; };
 		F8C6653F1C18240D00859663 /* Ground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
+		F8C665431C18381900859663 /* pierre.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pierre.atlas; sourceTree = "<group>"; };
+		F8C665451C18382B00859663 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +93,7 @@
 		F8C664F71C17F00100859663 = {
 			isa = PBXGroup;
 			children = (
-				F8C6653D1C1823F700859663 /* ground.atlas */,
-				F8C665371C18063B00859663 /* bee.atlas */,
+				F8C665451C18382B00859663 /* Player.swift */,
 				F8C665021C17F00100859663 /* Pierre Penguin Escapes */,
 				F8C6651B1C17F00100859663 /* Pierre Penguin EscapesTests */,
 				F8C665261C17F00100859663 /* Pierre Penguin EscapesUITests */,
@@ -113,14 +116,17 @@
 			children = (
 				F8C665031C17F00100859663 /* AppDelegate.swift */,
 				F8C665071C17F00100859663 /* GameScene.swift */,
+				F8C665431C18381900859663 /* pierre.atlas */,
 				F8C6653F1C18240D00859663 /* Ground.swift */,
 				F8C665391C181E2F00859663 /* GameSprite.swift */,
 				F8C6653B1C181EA800859663 /* Bee.swift */,
 				F8C665091C17F00100859663 /* GameViewController.swift */,
+				F8C665371C18063B00859663 /* bee.atlas */,
 				F8C6650B1C17F00100859663 /* Main.storyboard */,
 				F8C6650E1C17F00100859663 /* Assets.xcassets */,
 				F8C665101C17F00100859663 /* LaunchScreen.storyboard */,
 				F8C665131C17F00100859663 /* Info.plist */,
+				F8C6653D1C1823F700859663 /* ground.atlas */,
 			);
 			path = "Pierre Penguin Escapes";
 			sourceTree = "<group>";
@@ -254,6 +260,7 @@
 				F8C665121C17F00100859663 /* LaunchScreen.storyboard in Resources */,
 				F8C6650F1C17F00100859663 /* Assets.xcassets in Resources */,
 				F8C6650D1C17F00100859663 /* Main.storyboard in Resources */,
+				F8C665441C18381900859663 /* pierre.atlas in Resources */,
 				F8C6653E1C1823F700859663 /* ground.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +290,7 @@
 				F8C6653C1C181EA800859663 /* Bee.swift in Sources */,
 				F8C6653A1C181E2F00859663 /* GameSprite.swift in Sources */,
 				F8C665081C17F00100859663 /* GameScene.swift in Sources */,
+				F8C665461C18382B00859663 /* Player.swift in Sources */,
 				F8C6650A1C17F00100859663 /* GameViewController.swift in Sources */,
 				F8C665041C17F00100859663 /* AppDelegate.swift in Sources */,
 			);
