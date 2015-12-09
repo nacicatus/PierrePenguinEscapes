@@ -45,7 +45,8 @@ class GameScene: SKScene {
         
         
         // bee crash test
-        bee2.physicsBody?.applyImpulse(CGVector(dx: -3, dy: 0))
+        bee2.physicsBody?.mass = 0.2
+        bee2.physicsBody?.applyImpulse(CGVector(dx: -15, dy: 0))
     }
     
     
