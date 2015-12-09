@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F8C665041C17F00100859663 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C665031C17F00100859663 /* AppDelegate.swift */; };
-		F8C665061C17F00100859663 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8C665051C17F00100859663 /* GameScene.sks */; };
 		F8C665081C17F00100859663 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C665071C17F00100859663 /* GameScene.swift */; };
 		F8C6650A1C17F00100859663 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C665091C17F00100859663 /* GameViewController.swift */; };
 		F8C6650D1C17F00100859663 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C6650B1C17F00100859663 /* Main.storyboard */; };
@@ -16,6 +15,7 @@
 		F8C665121C17F00100859663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C665101C17F00100859663 /* LaunchScreen.storyboard */; };
 		F8C6651D1C17F00100859663 /* Pierre_Penguin_EscapesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6651C1C17F00100859663 /* Pierre_Penguin_EscapesTests.swift */; };
 		F8C665281C17F00100859663 /* Pierre_Penguin_EscapesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C665271C17F00100859663 /* Pierre_Penguin_EscapesUITests.swift */; };
+		F8C665361C17FA2100859663 /* bee.png in Resources */ = {isa = PBXBuildFile; fileRef = F8C665351C17FA2100859663 /* bee.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 /* Begin PBXFileReference section */
 		F8C665001C17F00100859663 /* Pierre Penguin Escapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pierre Penguin Escapes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C665031C17F00100859663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F8C665051C17F00100859663 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		F8C665071C17F00100859663 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		F8C665091C17F00100859663 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		F8C6650C1C17F00100859663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		F8C665231C17F00100859663 /* Pierre Penguin EscapesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pierre Penguin EscapesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C665271C17F00100859663 /* Pierre_Penguin_EscapesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pierre_Penguin_EscapesUITests.swift; sourceTree = "<group>"; };
 		F8C665291C17F00100859663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8C665351C17FA2100859663 /* bee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bee.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +81,7 @@
 		F8C664F71C17F00100859663 = {
 			isa = PBXGroup;
 			children = (
+				F8C665351C17FA2100859663 /* bee.png */,
 				F8C665021C17F00100859663 /* Pierre Penguin Escapes */,
 				F8C6651B1C17F00100859663 /* Pierre Penguin EscapesTests */,
 				F8C665261C17F00100859663 /* Pierre Penguin EscapesUITests */,
@@ -102,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				F8C665031C17F00100859663 /* AppDelegate.swift */,
-				F8C665051C17F00100859663 /* GameScene.sks */,
 				F8C665071C17F00100859663 /* GameScene.swift */,
 				F8C665091C17F00100859663 /* GameViewController.swift */,
 				F8C6650B1C17F00100859663 /* Main.storyboard */,
@@ -238,9 +238,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8C665061C17F00100859663 /* GameScene.sks in Resources */,
 				F8C665121C17F00100859663 /* LaunchScreen.storyboard in Resources */,
 				F8C6650F1C17F00100859663 /* Assets.xcassets in Resources */,
+				F8C665361C17FA2100859663 /* bee.png in Resources */,
 				F8C6650D1C17F00100859663 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
