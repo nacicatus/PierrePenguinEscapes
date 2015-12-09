@@ -62,7 +62,7 @@
 		F8C6653D1C1823F700859663 /* ground.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = ground.atlas; path = ../ground.atlas; sourceTree = "<group>"; };
 		F8C6653F1C18240D00859663 /* Ground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
 		F8C665431C18381900859663 /* pierre.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = pierre.atlas; sourceTree = "<group>"; };
-		F8C665451C18382B00859663 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		F8C665451C18382B00859663 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = ../Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,6 @@
 		F8C664F71C17F00100859663 = {
 			isa = PBXGroup;
 			children = (
-				F8C665451C18382B00859663 /* Player.swift */,
 				F8C665021C17F00100859663 /* Pierre Penguin Escapes */,
 				F8C6651B1C17F00100859663 /* Pierre Penguin EscapesTests */,
 				F8C665261C17F00100859663 /* Pierre Penguin EscapesUITests */,
@@ -119,6 +118,7 @@
 				F8C665431C18381900859663 /* pierre.atlas */,
 				F8C6653F1C18240D00859663 /* Ground.swift */,
 				F8C665391C181E2F00859663 /* GameSprite.swift */,
+				F8C665451C18382B00859663 /* Player.swift */,
 				F8C6653B1C181EA800859663 /* Bee.swift */,
 				F8C665091C17F00100859663 /* GameViewController.swift */,
 				F8C665371C18063B00859663 /* bee.atlas */,
@@ -521,6 +521,7 @@
 				F8C6652E1C17F00100859663 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8C6652F1C17F00100859663 /* Build configuration list for PBXNativeTarget "Pierre Penguin EscapesTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +530,7 @@
 				F8C665311C17F00100859663 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8C665321C17F00100859663 /* Build configuration list for PBXNativeTarget "Pierre Penguin EscapesUITests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +539,7 @@
 				F8C665341C17F00100859663 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

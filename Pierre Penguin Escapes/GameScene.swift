@@ -7,11 +7,14 @@
 //
 
 import SpriteKit
+import CoreMotion
 
 class GameScene: SKScene {
     // Create the world as a generice SKNode
     let world = SKNode()
     let ground = Ground()
+    
+    let motionManager = CMMotionManager()
   
     // Create player
     let player = Player()
@@ -35,7 +38,7 @@ class GameScene: SKScene {
         // lay the ground down
         // Position X : negative one screen width
         //Position Y: 100 above the bottom
-        let groundPosition = CGPoint(x: -self.size.width, y: 100)
+        let groundPosition = CGPoint(x: -self.size.width, y: 30)
         let groundSize = CGSize(width: self.size.width * 3, height: 0) // width 3x screen width, child nodes provide the height
         // Spawn the ground!
         ground.spawn(world, position: groundPosition, size: groundSize)
@@ -43,10 +46,8 @@ class GameScene: SKScene {
         // spawn the player
         player.spawn(world, position: CGPoint(x: 150, y: 250))
         
+        self.motionManager.startAccelerometerUpdates()
         
-        // bee crash test
-        bee2.physicsBody?.mass = 0.2
-        bee2.physicsBody?.applyImpulse(CGVector(dx: -15, dy: 0))
     }
     
     
@@ -59,6 +60,43 @@ class GameScene: SKScene {
         world.position = CGPoint(x: worldXPos, y: worldYPos)
         
         
+    }
+    
+    override func update(currentTime: NSTimeInterval) {
+        player.update()
+        // Unwrap the accelerometer data optional:
+        if let accelData = self.motionManager.accelerometerData {
+            var forceAmount: CGFloat
+            var movement = CGVector()
+            // Based on the device orientation, the tilt number
+            // can indicate opposite user desires. The
+            // UIApplication class exposes an enum that allows
+            // us to pull the current orientation.
+            // We will use this opportunity to explore Swift's
+            // switch syntax and assign the correct force for the
+            // current orientation:
+            switch UIApplication.sharedApplication().statusBarOrientation {
+            case .LandscapeLeft:
+                forceAmount = 20000
+            default:
+                forceAmount = 0
+            }
+            
+            // If the device is tilted more than 15% towards complete
+            // vertical, then we want to move the Penguin:
+            if accelData.acceleration.y > 0.15 {
+                movement.dx = forceAmount
+            }
+                // Core Motion values are relative to portrait view.
+                // Since we are in landscape, use y-values for x-axis.
+                else if accelData.acceleration.y < -0.15 {
+                movement.dx = -forceAmount
+            }
+            // Apply the force we created to the player:
+            player.physicsBody?.applyForce(movement)
+            
+            
+        }
     }
     
 }
