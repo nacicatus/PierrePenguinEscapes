@@ -65,6 +65,10 @@ class Player: SKSpriteNode, GameSprite {
     }
     
     func update() {
+        
+        // Set a constant velocity to the right
+        self.physicsBody?.velocity.dx = 200
+        
         // If flapping, apply a new force to push Pierre higher
         if self.flapping {
             var forceToApply = maxFlappingForce
@@ -82,6 +86,7 @@ class Player: SKSpriteNode, GameSprite {
         if self.physicsBody?.velocity.dy > 300 {
             self.physicsBody?.velocity.dy = 300
         }
+        
     }
     
     // Begin the flap animation

@@ -10,9 +10,13 @@ import Foundation
 import SpriteKit
 
 class Ground: SKSpriteNode, GameSprite {
+    
     var textureAtlas: SKTextureAtlas = SKTextureAtlas(named: "ground.atlas")
     // Create an Optional property named groundTexture to store the current ground texture
     var groundTexture: SKTexture?
+    // set up for looping the ground
+    var jumpWidth = CGFloat()
+    var jumpCount = CGFloat(1) // note the instantiation of 1
     
     func spawn(parentNode: SKNode, position: CGPoint, size: CGSize) {
         parentNode.addChild(self)
@@ -57,6 +61,19 @@ class Ground: SKSpriteNode, GameSprite {
                 
                 tileCount++
             }
+            // Find the width of one-third of the children nodes
+            jumpWidth = tileSize.width * floor(tileCount / 3)
+        }
+    }
+    
+    
+    // Check if we need to jump the ground forward
+    func checkForReposition(playerProgress: CGFloat) {
+        let groundJumpPosition = jumpWidth * jumpCount
+        if playerProgress >= groundJumpPosition {
+            // Move the ground forward:
+            self.position.x += jumpWidth
+            jumpCount++
         }
     }
     

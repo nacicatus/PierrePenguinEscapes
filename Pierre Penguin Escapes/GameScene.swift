@@ -18,6 +18,9 @@ class GameScene: SKScene {
   
     // Create player
     let player = Player()
+    let initialPlayerPosition = CGPoint(x: 150, y: 250)
+    var playerProgress = CGFloat()
+    
     
     override func didMoveToView(view: SKView) {
         // Screen center
@@ -46,7 +49,7 @@ class GameScene: SKScene {
         ground.spawn(world, position: groundPosition, size: groundSize)
         
         // spawn the player
-        player.spawn(world, position: CGPoint(x: 150, y: 250))
+        player.spawn(world, position: initialPlayerPosition)
         
         // Set the gravity
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -5)
@@ -73,6 +76,12 @@ class GameScene: SKScene {
         
         // Move the world
         world.position = CGPoint(x: worldXPos, y: worldYPos)
+        
+        // track the player's progress
+        playerProgress = player.position.x - initialPlayerPosition.x // We'll also use this to calculate high scores
+        
+        // should the ground jump forward?
+        ground.checkForReposition(playerProgress)
         
     }
     
