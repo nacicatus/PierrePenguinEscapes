@@ -12,10 +12,19 @@ class GameScene: SKScene {
     // Create the world as a generice SKNode
     let world = SKNode()
     
-    // create a bee sprite
+    // create bee sprites
     let bee = SKSpriteNode()
     
     override func didMoveToView(view: SKView) {
+        
+        let bee2 = Bee()
+        let bee3 = Bee()
+        let bee4 = Bee()
+        
+        // spawn the bees
+        bee2.spawn(world, position: CGPoint(x: 325, y: 325))
+        bee3.spawn(world, position: CGPoint(x: 200, y: 325))
+        bee4.spawn(world, position: CGPoint(x: 50, y: 200))
         
         self.backgroundColor = UIColor(red: 0.4, green: 0.6, blue: 0.94, alpha: 1)
         // add the world as a node
