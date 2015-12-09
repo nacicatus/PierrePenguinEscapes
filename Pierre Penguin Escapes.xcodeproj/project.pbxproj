@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8C665041C17F00100859663 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C665031C17F00100859663 /* AppDelegate.swift */; };
+		F8C665061C17F00100859663 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8C665051C17F00100859663 /* GameScene.sks */; };
+		F8C665081C17F00100859663 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C665071C17F00100859663 /* GameScene.swift */; };
+		F8C6650A1C17F00100859663 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C665091C17F00100859663 /* GameViewController.swift */; };
+		F8C6650D1C17F00100859663 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C6650B1C17F00100859663 /* Main.storyboard */; };
+		F8C6650F1C17F00100859663 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C6650E1C17F00100859663 /* Assets.xcassets */; };
+		F8C665121C17F00100859663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C665101C17F00100859663 /* LaunchScreen.storyboard */; };
+		F8C6651D1C17F00100859663 /* Pierre_Penguin_EscapesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6651C1C17F00100859663 /* Pierre_Penguin_EscapesTests.swift */; };
+		F8C665281C17F00100859663 /* Pierre_Penguin_EscapesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C665271C17F00100859663 /* Pierre_Penguin_EscapesUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F8C665191C17F00100859663 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8C664F81C17F00100859663 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8C664FF1C17F00100859663;
+			remoteInfo = "Pierre Penguin Escapes";
+		};
+		F8C665241C17F00100859663 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8C664F81C17F00100859663 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8C664FF1C17F00100859663;
+			remoteInfo = "Pierre Penguin Escapes";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F8C665001C17F00100859663 /* Pierre Penguin Escapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pierre Penguin Escapes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8C665031C17F00100859663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F8C665051C17F00100859663 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		F8C665071C17F00100859663 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		F8C665091C17F00100859663 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F8C6650C1C17F00100859663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F8C6650E1C17F00100859663 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8C665111C17F00100859663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F8C665131C17F00100859663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8C665181C17F00100859663 /* Pierre Penguin EscapesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pierre Penguin EscapesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8C6651C1C17F00100859663 /* Pierre_Penguin_EscapesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pierre_Penguin_EscapesTests.swift; sourceTree = "<group>"; };
+		F8C6651E1C17F00100859663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8C665231C17F00100859663 /* Pierre Penguin EscapesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pierre Penguin EscapesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8C665271C17F00100859663 /* Pierre_Penguin_EscapesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pierre_Penguin_EscapesUITests.swift; sourceTree = "<group>"; };
+		F8C665291C17F00100859663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8C664FD1C17F00100859663 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C665151C17F00100859663 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C665201C17F00100859663 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8C664F71C17F00100859663 = {
+			isa = PBXGroup;
+			children = (
+				F8C665021C17F00100859663 /* Pierre Penguin Escapes */,
+				F8C6651B1C17F00100859663 /* Pierre Penguin EscapesTests */,
+				F8C665261C17F00100859663 /* Pierre Penguin EscapesUITests */,
+				F8C665011C17F00100859663 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8C665011C17F00100859663 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8C665001C17F00100859663 /* Pierre Penguin Escapes.app */,
+				F8C665181C17F00100859663 /* Pierre Penguin EscapesTests.xctest */,
+				F8C665231C17F00100859663 /* Pierre Penguin EscapesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8C665021C17F00100859663 /* Pierre Penguin Escapes */ = {
+			isa = PBXGroup;
+			children = (
+				F8C665031C17F00100859663 /* AppDelegate.swift */,
+				F8C665051C17F00100859663 /* GameScene.sks */,
+				F8C665071C17F00100859663 /* GameScene.swift */,
+				F8C665091C17F00100859663 /* GameViewController.swift */,
+				F8C6650B1C17F00100859663 /* Main.storyboard */,
+				F8C6650E1C17F00100859663 /* Assets.xcassets */,
+				F8C665101C17F00100859663 /* LaunchScreen.storyboard */,
+				F8C665131C17F00100859663 /* Info.plist */,
+			);
+			path = "Pierre Penguin Escapes";
+			sourceTree = "<group>";
+		};
+		F8C6651B1C17F00100859663 /* Pierre Penguin EscapesTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8C6651C1C17F00100859663 /* Pierre_Penguin_EscapesTests.swift */,
+				F8C6651E1C17F00100859663 /* Info.plist */,
+			);
+			path = "Pierre Penguin EscapesTests";
+			sourceTree = "<group>";
+		};
+		F8C665261C17F00100859663 /* Pierre Penguin EscapesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F8C665271C17F00100859663 /* Pierre_Penguin_EscapesUITests.swift */,
+				F8C665291C17F00100859663 /* Info.plist */,
+			);
+			path = "Pierre Penguin EscapesUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8C664FF1C17F00100859663 /* Pierre Penguin Escapes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8C6652C1C17F00100859663 /* Build configuration list for PBXNativeTarget "Pierre Penguin Escapes" */;
+			buildPhases = (
+				F8C664FC1C17F00100859663 /* Sources */,
+				F8C664FD1C17F00100859663 /* Frameworks */,
+				F8C664FE1C17F00100859663 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pierre Penguin Escapes";
+			productName = "Pierre Penguin Escapes";
+			productReference = F8C665001C17F00100859663 /* Pierre Penguin Escapes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F8C665171C17F00100859663 /* Pierre Penguin EscapesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8C6652F1C17F00100859663 /* Build configuration list for PBXNativeTarget "Pierre Penguin EscapesTests" */;
+			buildPhases = (
+				F8C665141C17F00100859663 /* Sources */,
+				F8C665151C17F00100859663 /* Frameworks */,
+				F8C665161C17F00100859663 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8C6651A1C17F00100859663 /* PBXTargetDependency */,
+			);
+			name = "Pierre Penguin EscapesTests";
+			productName = "Pierre Penguin EscapesTests";
+			productReference = F8C665181C17F00100859663 /* Pierre Penguin EscapesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F8C665221C17F00100859663 /* Pierre Penguin EscapesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8C665321C17F00100859663 /* Build configuration list for PBXNativeTarget "Pierre Penguin EscapesUITests" */;
+			buildPhases = (
+				F8C6651F1C17F00100859663 /* Sources */,
+				F8C665201C17F00100859663 /* Frameworks */,
+				F8C665211C17F00100859663 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8C665251C17F00100859663 /* PBXTargetDependency */,
+			);
+			name = "Pierre Penguin EscapesUITests";
+			productName = "Pierre Penguin EscapesUITests";
+			productReference = F8C665231C17F00100859663 /* Pierre Penguin EscapesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8C664F81C17F00100859663 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Saurabh Sikka";
+				TargetAttributes = {
+					F8C664FF1C17F00100859663 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = XSB6YPP53Z;
+					};
+					F8C665171C17F00100859663 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = XSB6YPP53Z;
+						TestTargetID = F8C664FF1C17F00100859663;
+					};
+					F8C665221C17F00100859663 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = XSB6YPP53Z;
+						TestTargetID = F8C664FF1C17F00100859663;
+					};
+				};
+			};
+			buildConfigurationList = F8C664FB1C17F00100859663 /* Build configuration list for PBXProject "Pierre Penguin Escapes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8C664F71C17F00100859663;
+			productRefGroup = F8C665011C17F00100859663 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8C664FF1C17F00100859663 /* Pierre Penguin Escapes */,
+				F8C665171C17F00100859663 /* Pierre Penguin EscapesTests */,
+				F8C665221C17F00100859663 /* Pierre Penguin EscapesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8C664FE1C17F00100859663 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8C665061C17F00100859663 /* GameScene.sks in Resources */,
+				F8C665121C17F00100859663 /* LaunchScreen.storyboard in Resources */,
+				F8C6650F1C17F00100859663 /* Assets.xcassets in Resources */,
+				F8C6650D1C17F00100859663 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C665161C17F00100859663 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C665211C17F00100859663 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8C664FC1C17F00100859663 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8C665081C17F00100859663 /* GameScene.swift in Sources */,
+				F8C6650A1C17F00100859663 /* GameViewController.swift in Sources */,
+				F8C665041C17F00100859663 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C665141C17F00100859663 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8C6651D1C17F00100859663 /* Pierre_Penguin_EscapesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C6651F1C17F00100859663 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8C665281C17F00100859663 /* Pierre_Penguin_EscapesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8C6651A1C17F00100859663 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8C664FF1C17F00100859663 /* Pierre Penguin Escapes */;
+			targetProxy = F8C665191C17F00100859663 /* PBXContainerItemProxy */;
+		};
+		F8C665251C17F00100859663 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8C664FF1C17F00100859663 /* Pierre Penguin Escapes */;
+			targetProxy = F8C665241C17F00100859663 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F8C6650B1C17F00100859663 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8C6650C1C17F00100859663 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F8C665101C17F00100859663 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8C665111C17F00100859663 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8C6652A1C17F00100859663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8C6652B1C17F00100859663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8C6652D1C17F00100859663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Pierre Penguin Escapes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saurabhsikka.Pierre-Penguin-Escapes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F8C6652E1C17F00100859663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Pierre Penguin Escapes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saurabhsikka.Pierre-Penguin-Escapes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F8C665301C17F00100859663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "Pierre Penguin EscapesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saurabhsikka.Pierre-Penguin-EscapesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pierre Penguin Escapes.app/Pierre Penguin Escapes";
+			};
+			name = Debug;
+		};
+		F8C665311C17F00100859663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Pierre Penguin EscapesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saurabhsikka.Pierre-Penguin-EscapesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pierre Penguin Escapes.app/Pierre Penguin Escapes";
+			};
+			name = Release;
+		};
+		F8C665331C17F00100859663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "Pierre Penguin EscapesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saurabhsikka.Pierre-Penguin-EscapesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Pierre Penguin Escapes";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F8C665341C17F00100859663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Pierre Penguin EscapesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saurabhsikka.Pierre-Penguin-EscapesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Pierre Penguin Escapes";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8C664FB1C17F00100859663 /* Build configuration list for PBXProject "Pierre Penguin Escapes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C6652A1C17F00100859663 /* Debug */,
+				F8C6652B1C17F00100859663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8C6652C1C17F00100859663 /* Build configuration list for PBXNativeTarget "Pierre Penguin Escapes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C6652D1C17F00100859663 /* Debug */,
+				F8C6652E1C17F00100859663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F8C6652F1C17F00100859663 /* Build configuration list for PBXNativeTarget "Pierre Penguin EscapesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C665301C17F00100859663 /* Debug */,
+				F8C665311C17F00100859663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F8C665321C17F00100859663 /* Build configuration list for PBXNativeTarget "Pierre Penguin EscapesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C665331C17F00100859663 /* Debug */,
+				F8C665341C17F00100859663 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8C664F81C17F00100859663 /* Project object */;
+}
