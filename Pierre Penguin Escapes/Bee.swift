@@ -38,6 +38,11 @@ class Bee: SKSpriteNode, GameSprite {
         flyAnimation = SKAction.repeatActionForever(flyAction)
     }
         
-    func onTap() { }
-        
+    func onTap() {
+        self.xScale = 4
+        self.yScale = 4
+    
     }
+    
+    
+}
