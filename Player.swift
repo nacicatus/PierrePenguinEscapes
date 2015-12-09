@@ -15,12 +15,19 @@ class Player: SKSpriteNode, GameSprite {
     var flyAnimation = SKAction()
     var soarAnimation = SKAction()
     
+    // Store whether we are flapping our wings or in freefall:
+    var flapping = false
+    // Set a maximum upward force:
+    let maxFlappingForce: CGFloat = 57000
+    // Pierre should slow down when he flies too high
+    let maxHeight: CGFloat = 1000
+    
     func spawn(parentNode: SKNode, position: CGPoint, size: CGSize = CGSize(width: 64, height: 64)) {
         parentNode.addChild(self)
         createAnimations()
         self.size = size
         self.position = position
-        self.runAction(flyAnimation, withKey: "flapAnimation")
+        self.runAction(soarAnimation, withKey: "soarAnimation")
         
         // Create a physics body based on one frame of Pierre's animation when his wings are tucked in
         let bodyTexture = textureAtlas.textureNamed("pierre-flying-3.png")
@@ -58,6 +65,37 @@ class Player: SKSpriteNode, GameSprite {
     }
     
     func update() {
+        // If flapping, apply a new force to push Pierre higher
+        if self.flapping {
+            var forceToApply = maxFlappingForce
+            // Apply less force if too high
+            if position.y > 600 {
+                let percentageOfMaximumHeight = position.y / maxHeight
+                let flappingForceSubtraction = percentageOfMaximumHeight * maxFlappingForce
+                forceToApply -= flappingForceSubtraction
+            }
+            // Apply the final force:
+            self.physicsBody?.applyForce(CGVector(dx: 0, dy: forceToApply))
+        }
         
+        // Limit Pierre's top speed as he climbs the y axis
+        if self.physicsBody?.velocity.dy > 300 {
+            self.physicsBody?.velocity.dy = 300
+        }
+    }
+    
+    // Begin the flap animation
+    func startFlapping() {
+        self.removeActionForKey("soarAnimation")
+        self.runAction(flyAnimation, withKey: "flapAnimation")
+        self.flapping = true
+    }
+    
+    
+    // Stop flapping
+    func stopFlapping() {
+        self.removeActionForKey("flapAnimation")
+        self.runAction(soarAnimation, withKey: "soarAnimation")
+        self.flapping = false
     }
 }

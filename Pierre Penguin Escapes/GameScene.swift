@@ -45,6 +45,8 @@ class GameScene: SKScene {
         // spawn the player
         player.spawn(world, position: CGPoint(x: 150, y: 250))
         
+        // Set the gravity
+        self.physicsWorld.gravity = CGVector(dx: 0, dy: -5)
         
     }
     
@@ -69,6 +71,15 @@ class GameScene: SKScene {
                 gameSprite.onTap()
             }
         }
+        player.startFlapping()
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        player.stopFlapping()
+    }
+    
+    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+        player.stopFlapping()
     }
     
     override func update(currentTime: NSTimeInterval) {

@@ -39,8 +39,7 @@ class Bee: SKSpriteNode, GameSprite {
     }
         
     func onTap() {
-        self.xScale = 4
-        self.yScale = 4
+    
     
     }
     
