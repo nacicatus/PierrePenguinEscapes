@@ -10,29 +10,24 @@ import SpriteKit
 
 class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
-       // Create a sprite node or two
-        let mySprite = SKSpriteNode(color: UIColor.yellowColor(), size: CGSize(width: 50, height: 50))
-        let badSprite = SKSpriteNode(color: UIColor.whiteColor(), size: CGSize(width: 20, height: 20))
+       // Create a blue sky
+        self.backgroundColor = UIColor(red: 0.4, green: 0.6, blue: 0.95, alpha: 1)
         
-        // Give it a position relative to the parent node (the scene)
-        mySprite.position = CGPoint(x: 300, y: 300)
-        badSprite.position = CGPoint(x: 100, y: 100)
+        // create a bee sprite
+        let bee = SKSpriteNode()
+        bee.position = CGPoint(x: 250, y: 250)
+        bee.size = CGSize(width: 28, height: 24)
+        self.addChild(bee)
         
-        // Add the sprite node to the parent node
-        self.addChild(mySprite)
-        self.addChild(badSprite)
+        // Find the bee atlas
+        let beeAtlas = SKTextureAtlas(named: "bee.atlas")
+        // create an array from the frames in the atlas
+        let beeFrames: [SKTexture] = [beeAtlas.textureNamed("bee.png"), beeAtlas.textureNamed("bee_fly.png")]
+        //Create a new animation action
+        let flyAction = SKAction.animateWithTextures(beeFrames, timePerFrame: 0.05)
+        let beeAction = SKAction.repeatActionForever(flyAction)
         
-        // Create some actions
-        let action0 = SKAction.moveTo(CGPoint(x: 200, y: 200), duration: 5)
-        let action1 = SKAction.scaleTo(4, duration: 4)
-        let action2 = SKAction.rotateByAngle(5, duration: 5)
-        let actionGroup = SKAction.group([action0, action2])
-        let actionSequence = SKAction.sequence([action1, action2])
-        
-        // Run the actions as singly, as a group, or in a sequence
-        badSprite.runAction(action0)
-        mySprite.runAction(actionSequence)
-        badSprite.runAction(actionGroup)
+        bee.runAction(beeAction)
     }
     
 }
