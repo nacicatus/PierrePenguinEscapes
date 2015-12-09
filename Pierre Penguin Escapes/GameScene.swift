@@ -11,6 +11,7 @@ import SpriteKit
 class GameScene: SKScene {
     // Create the world as a generice SKNode
     let world = SKNode()
+    let ground = Ground()
     
     // create bee sprites
     let bee = SKSpriteNode()
@@ -25,6 +26,14 @@ class GameScene: SKScene {
         bee2.spawn(world, position: CGPoint(x: 325, y: 325))
         bee3.spawn(world, position: CGPoint(x: 200, y: 325))
         bee4.spawn(world, position: CGPoint(x: 50, y: 200))
+        
+        // lay the ground down
+        // Position X : negative one screen width
+        //Position Y: 100 above the bottom
+        let groundPosition = CGPoint(x: -self.size.width, y: 100)
+        let groundSize = CGSize(width: self.size.width * 3, height: 0) // width 3x screen width, child nodes provide the height
+        // Spawn the ground!
+        ground.spawn(world, position: groundPosition, size: groundSize)
         
         self.backgroundColor = UIColor(red: 0.4, green: 0.6, blue: 0.94, alpha: 1)
         // add the world as a node
