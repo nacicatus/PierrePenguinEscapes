@@ -21,6 +21,9 @@ class GameScene: SKScene {
     let initialPlayerPosition = CGPoint(x: 150, y: 250)
     var playerProgress = CGFloat()
     
+    // New instance of EncounterManager class
+    let encounterManager = EncounterManager()
+    
     
     override func didMoveToView(view: SKView) {
         // Screen center
@@ -28,49 +31,13 @@ class GameScene: SKScene {
         
         // Blue sky
         self.backgroundColor = UIColor(red: 0.4, green: 0.6, blue: 0.94, alpha: 1)
+        
         // add the world as a node
         self.addChild(world)
         
-        // Spawn the bees
-        let bee2 = Bee()
-        let bee3 = Bee()
-        let bee4 = Bee()
-        
-        bee2.spawn(world, position: CGPoint(x: 325, y: 325))
-        bee3.spawn(world, position: CGPoint(x: 200, y: 325))
-        bee4.spawn(world, position: CGPoint(x: 50, y: 200))
-        
-        // Spawn a bat:
-        let bat = Bat()
-        bat.spawn(world, position: CGPoint(x: 400, y: 200))
-        // A blade:
-        let blade = Blade()
-        blade.spawn(world, position: CGPoint(x: 300, y: 76))
-        // A mad fly:
-        let madFly = MadFly()
-        madFly.spawn(world, position: CGPoint(x: 50, y: 50))
-        // A bronze coin:
-        let bronzeCoin = Coin()
-        bronzeCoin.spawn(world, position: CGPoint(x: 490, y: 250))
-        // A gold coin:
-        let goldCoin = Coin()
-        goldCoin.spawn(world, position: CGPoint(x: 460, y: 250))
-        goldCoin.turnToGold()
-        // A ghost!
-        let ghost = Ghost()
-        ghost.spawn(world, position: CGPoint(x: 50, y: 300))
-        // The powerup star:
-        let star = Star()
-        star.spawn(world, position: CGPoint(x: 250, y: 250))
-        
-        
-        // lay the ground down
-        // Position X : negative one screen width
-        //Position Y: 100 above the bottom
+        // spawn the ground
         let groundPosition = CGPoint(x: -self.size.width, y: 30)
         let groundSize = CGSize(width: self.size.width * 3, height: 0) // width 3x screen width, child nodes provide the height
-        
-        // Spawn the ground!
         ground.spawn(world, position: groundPosition, size: groundSize)
         
         // spawn the player
@@ -78,6 +45,10 @@ class GameScene: SKScene {
         
         // Set the gravity
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -5)
+        
+        // Encounters
+        encounterManager.addEncountersToWorld(self.world)
+        encounterManager.encounters[0].position = CGPoint(x: 300, y: 0)
         
     }
     
