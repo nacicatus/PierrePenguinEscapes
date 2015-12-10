@@ -40,11 +40,36 @@ class GameScene: SKScene {
         bee3.spawn(world, position: CGPoint(x: 200, y: 325))
         bee4.spawn(world, position: CGPoint(x: 50, y: 200))
         
+        // Spawn a bat:
+        let bat = Bat()
+        bat.spawn(world, position: CGPoint(x: 400, y: 200))
+        // A blade:
+        let blade = Blade()
+        blade.spawn(world, position: CGPoint(x: 300, y: 76))
+        // A mad fly:
+        let madFly = MadFly()
+        madFly.spawn(world, position: CGPoint(x: 50, y: 50))
+        // A bronze coin:
+        let bronzeCoin = Coin()
+        bronzeCoin.spawn(world, position: CGPoint(x: 490, y: 250))
+        // A gold coin:
+        let goldCoin = Coin()
+        goldCoin.spawn(world, position: CGPoint(x: 460, y: 250))
+        goldCoin.turnToGold()
+        // A ghost!
+        let ghost = Ghost()
+        ghost.spawn(world, position: CGPoint(x: 50, y: 300))
+        // The powerup star:
+        let star = Star()
+        star.spawn(world, position: CGPoint(x: 250, y: 250))
+        
+        
         // lay the ground down
         // Position X : negative one screen width
         //Position Y: 100 above the bottom
         let groundPosition = CGPoint(x: -self.size.width, y: 30)
         let groundSize = CGSize(width: self.size.width * 3, height: 0) // width 3x screen width, child nodes provide the height
+        
         // Spawn the ground!
         ground.spawn(world, position: groundPosition, size: groundSize)
         

@@ -14,6 +14,7 @@
 		F8C4124F1C1954EA009AD8FD /* Bat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4124E1C1954EA009AD8FD /* Bat.swift */; };
 		F8C412511C195690009AD8FD /* Ghost.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C412501C195690009AD8FD /* Ghost.swift */; };
 		F8C412531C19630E009AD8FD /* Blade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C412521C19630E009AD8FD /* Blade.swift */; };
+		F8C412551C1964F5009AD8FD /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C412541C1964F5009AD8FD /* Coin.swift */; };
 		F8C665041C17F00100859663 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C665031C17F00100859663 /* AppDelegate.swift */; };
 		F8C665081C17F00100859663 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C665071C17F00100859663 /* GameScene.swift */; };
 		F8C6650A1C17F00100859663 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C665091C17F00100859663 /* GameViewController.swift */; };
@@ -56,6 +57,7 @@
 		F8C4124E1C1954EA009AD8FD /* Bat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bat.swift; sourceTree = "<group>"; };
 		F8C412501C195690009AD8FD /* Ghost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ghost.swift; sourceTree = "<group>"; };
 		F8C412521C19630E009AD8FD /* Blade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blade.swift; sourceTree = "<group>"; };
+		F8C412541C1964F5009AD8FD /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		F8C665001C17F00100859663 /* Pierre Penguin Escapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pierre Penguin Escapes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C665031C17F00100859663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8C665071C17F00100859663 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				F8C4124E1C1954EA009AD8FD /* Bat.swift */,
 				F8C412501C195690009AD8FD /* Ghost.swift */,
 				F8C412521C19630E009AD8FD /* Blade.swift */,
+				F8C412541C1964F5009AD8FD /* Coin.swift */,
 				F8C665431C18381900859663 /* pierre.atlas */,
 				F8C6653F1C18240D00859663 /* Ground.swift */,
 				F8C665391C181E2F00859663 /* GameSprite.swift */,
@@ -317,6 +320,7 @@
 				F8C412511C195690009AD8FD /* Ghost.swift in Sources */,
 				F8C665461C18382B00859663 /* Player.swift in Sources */,
 				F8C4124F1C1954EA009AD8FD /* Bat.swift in Sources */,
+				F8C412551C1964F5009AD8FD /* Coin.swift in Sources */,
 				F8C6650A1C17F00100859663 /* GameViewController.swift in Sources */,
 				F8C665041C17F00100859663 /* AppDelegate.swift in Sources */,
 				F8C4124B1C19539A009AD8FD /* MadFly.swift in Sources */,

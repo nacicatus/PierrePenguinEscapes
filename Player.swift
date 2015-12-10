@@ -67,7 +67,7 @@ class Player: SKSpriteNode, GameSprite {
     func update() {
         
         // Set a constant velocity to the right
-        self.physicsBody?.velocity.dx = 200
+      //  self.physicsBody?.velocity.dx = 200
         
         // If flapping, apply a new force to push Pierre higher
         if self.flapping {
