@@ -17,6 +17,8 @@
 		F8C412551C1964F5009AD8FD /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C412541C1964F5009AD8FD /* Coin.swift */; };
 		F8C412581C196EAC009AD8FD /* EncounterBats.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8C412571C196EAC009AD8FD /* EncounterBats.sks */; };
 		F8C4125A1C196FAF009AD8FD /* EncounterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C412591C196FAF009AD8FD /* EncounterManager.swift */; };
+		F8C4125C1C19775D009AD8FD /* EncounterBees.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8C4125B1C19775D009AD8FD /* EncounterBees.sks */; };
+		F8C4125E1C19784F009AD8FD /* EncounterGhosts.sks in Resources */ = {isa = PBXBuildFile; fileRef = F8C4125D1C19784F009AD8FD /* EncounterGhosts.sks */; };
 		F8C665041C17F00100859663 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C665031C17F00100859663 /* AppDelegate.swift */; };
 		F8C665081C17F00100859663 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C665071C17F00100859663 /* GameScene.swift */; };
 		F8C6650A1C17F00100859663 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C665091C17F00100859663 /* GameViewController.swift */; };
@@ -62,6 +64,8 @@
 		F8C412541C1964F5009AD8FD /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		F8C412571C196EAC009AD8FD /* EncounterBats.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterBats.sks; sourceTree = "<group>"; };
 		F8C412591C196FAF009AD8FD /* EncounterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncounterManager.swift; sourceTree = "<group>"; };
+		F8C4125B1C19775D009AD8FD /* EncounterBees.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = EncounterBees.sks; path = "Pierre Penguin Escapes/EncounterBees.sks"; sourceTree = "<group>"; };
+		F8C4125D1C19784F009AD8FD /* EncounterGhosts.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = EncounterGhosts.sks; sourceTree = "<group>"; };
 		F8C665001C17F00100859663 /* Pierre Penguin Escapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pierre Penguin Escapes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C665031C17F00100859663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8C665071C17F00100859663 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -113,7 +117,9 @@
 		F8C412561C196E84009AD8FD /* Encounters */ = {
 			isa = PBXGroup;
 			children = (
+				F8C4125D1C19784F009AD8FD /* EncounterGhosts.sks */,
 				F8C412571C196EAC009AD8FD /* EncounterBats.sks */,
+				F8C4125B1C19775D009AD8FD /* EncounterBees.sks */,
 				F8C412591C196FAF009AD8FD /* EncounterManager.swift */,
 			);
 			name = Encounters;
@@ -296,12 +302,14 @@
 			files = (
 				F8C665381C18063B00859663 /* bee.atlas in Resources */,
 				F8C665121C17F00100859663 /* LaunchScreen.storyboard in Resources */,
+				F8C4125E1C19784F009AD8FD /* EncounterGhosts.sks in Resources */,
 				F8C6650F1C17F00100859663 /* Assets.xcassets in Resources */,
 				F8C6650D1C17F00100859663 /* Main.storyboard in Resources */,
 				F8C412581C196EAC009AD8FD /* EncounterBats.sks in Resources */,
 				F8C665441C18381900859663 /* pierre.atlas in Resources */,
 				F8C6653E1C1823F700859663 /* ground.atlas in Resources */,
 				F8C4124D1C1953E4009AD8FD /* enemies.atlas in Resources */,
+				F8C4125C1C19775D009AD8FD /* EncounterBees.sks in Resources */,
 				F8C412471C195144009AD8FD /* goods.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

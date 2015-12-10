@@ -12,9 +12,12 @@ import SpriteKit
 class EncounterManager {
     
     // Store the encounter file names
-    let encounterNames:[String] = ["EncounterBats"]
+    let encounterNames:[String] = ["EncounterBats", "EncounterBees", "EncounterGhosts"]
     // Each encounter is an SKNode Array
     var encounters:[SKNode] = []
+    
+    var currentEncounterIndex: Int?
+    var previousEncounterIndex: Int?
     
     init() {
         // loop through each encounter scene
@@ -58,6 +61,8 @@ class EncounterManager {
             }
             // Add the populated encounter node to the array
             encounters.append(encounter)
+            // Save initial sprite positions for this encounter
+            saveSpritePositions(encounter)
         }
     }
     
@@ -71,6 +76,79 @@ class EncounterManager {
         }
     }
     
+    
+     // Store initial positions of the children of a node
+    func saveSpritePositions(node: SKNode) {
+        for sprite in node.children {
+            if let spriteNode = sprite as? SKSpriteNode {
+                let initialPositionValue = NSValue(CGPoint: sprite.position)
+                spriteNode.userData = ["initialPosition":initialPositionValue]
+                // Save the positions for children of this node
+                saveSpritePositions(spriteNode)
+            }
+        }
+    }
+    
+    
+    // Reset all children nodes to their original position:
+    func resetSpritePositions(node: SKNode) {
+        for sprite in node.children {
+            if let spriteNode = sprite as? SKSpriteNode {
+                // remove any linear or angular velocity
+                spriteNode.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+                spriteNode.physicsBody?.angularVelocity = 0
+                // Reset the rotation of the sprite
+                spriteNode.zRotation = 0
+                if let initialPositionVal = spriteNode.userData?.valueForKey("initialPosition") as? NSValue {
+                    // Reset the position of the sprite
+                    spriteNode.position = initialPositionVal.CGPointValue()
+                }
+                // Reset positions on this node's children
+                resetSpritePositions(spriteNode)
+            }
+        }
+    }
+    
+    func placeNextEncounter(currentXPos: CGFloat) {
+        // Count the encounters in a arandom ready type
+        let encounterCount = UInt32(encounters.count)
+        // game requires at least 3 encounters
+        if encounterCount < 3 {
+            return
+        }
+        // We need to pick an encounter that is not currently displayed
+        var nextEncounterIndex: Int?
+        var trulyNew: Bool?
+        
+        while (trulyNew == false || trulyNew == nil) {
+            // Pick a random encounter
+            nextEncounterIndex = Int(arc4random_uniform(encounterCount))
+            // assert this is a new encounter
+            trulyNew = true
+            // test if it is instead the current encounter
+            if let currentIndex = currentEncounterIndex {
+                if nextEncounterIndex == currentIndex {
+                    trulyNew = false
+                }
+            }
+            // test if it is the directly previous encounter
+            if let previousIndex = previousEncounterIndex {
+                if nextEncounterIndex == previousIndex {
+                    trulyNew = false
+                }
+            }
+            
+        }
+        
+        // Keep track of the current Encounter
+        previousEncounterIndex = currentEncounterIndex
+        currentEncounterIndex = nextEncounterIndex
+        
+        // Reset the new encounter and position it ahead of the player
+        let encounter = encounters[currentEncounterIndex!]
+        encounter.position = CGPoint(x: currentXPos + 1000, y: 0)
+        resetSpritePositions(encounter)
+    }
     
     
 }

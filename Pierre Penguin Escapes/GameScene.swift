@@ -24,6 +24,9 @@ class GameScene: SKScene {
     // New instance of EncounterManager class
     let encounterManager = EncounterManager()
     
+    // track encounters
+    var nextEncounterSpawnPosition = CGFloat(150)
+    
     
     override func didMoveToView(view: SKView) {
         // Screen center
@@ -78,6 +81,12 @@ class GameScene: SKScene {
         
         // should the ground jump forward?
         ground.checkForReposition(playerProgress)
+        
+        // Check if player moves past the position and we need to set a new encounter
+        if player.position.x > nextEncounterSpawnPosition {
+            encounterManager.placeNextEncounter(nextEncounterSpawnPosition)
+            nextEncounterSpawnPosition += 1400
+        }
         
     }
     
