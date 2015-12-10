@@ -22,6 +22,19 @@ class Player: SKSpriteNode, GameSprite {
     // Pierre should slow down when he flies too high
     let maxHeight: CGFloat = 1000
     
+    // The player will take 3 hits before game over:
+    var health:Int = 3
+    // keep track of when player invulnerable
+    var invulnerable = false
+    // keep track when player newly damaged
+    var damaged = false
+    
+    // We will create animations to run when player takes damage
+    var damageAnimation = SKAction()
+    var dieAnimation = SKAction()
+    // stop forward velocity if player dies
+    var forwardVelocity:CGFloat = 200
+    
     func spawn(parentNode: SKNode, position: CGPoint, size: CGSize = CGSize(width: 64, height: 64)) {
         parentNode.addChild(self)
         createAnimations()
@@ -91,10 +104,18 @@ class Player: SKSpriteNode, GameSprite {
             self.physicsBody?.velocity.dy = 300
         }
         
+        // Set a constant velocity to the right
+        self.physicsBody?.velocity.dx = self.forwardVelocity
+        
     }
     
     // Begin the flap animation
     func startFlapping() {
+        
+        // if player is dead, stop him flying
+        if self.health <= 0 { return }
+        
+        // start flapping if alive
         self.removeActionForKey("soarAnimation")
         self.runAction(flyAnimation, withKey: "flapAnimation")
         self.flapping = true
@@ -103,8 +124,29 @@ class Player: SKSpriteNode, GameSprite {
     
     // Stop flapping
     func stopFlapping() {
+        // if player is dead, stop him flying
+        if self.health <= 0 { return }
+        
         self.removeActionForKey("flapAnimation")
         self.runAction(soarAnimation, withKey: "soarAnimation")
         self.flapping = false
+    }
+    
+    func die() {
+        self.alpha = 1
+        self.removeAllActions()
+        self.runAction(self.dieAnimation)
+        self.flapping = false
+        self.forwardVelocity = 0
+    }
+    
+    func takeDamage() {
+        if self.invulnerable || self.damaged { return }
+        self.health--
+        if self.health == 0 {
+            die()
+        } else {
+            self.runAction(self.damageAnimation)
+        }
     }
 }
