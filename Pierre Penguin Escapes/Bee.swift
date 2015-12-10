@@ -28,6 +28,8 @@ class Bee: SKSpriteNode, GameSprite {
         self.physicsBody = SKPhysicsBody(circleOfRadius: size.width / 2)
         // but we don't want them to fall so we eliminate gravity for them :
         self.physicsBody?.affectedByGravity = false
+        self.physicsBody?.categoryBitMask = PhysicsCategory.enemy.rawValue
+        self.physicsBody?.collisionBitMask = ~PhysicsCategory.damagedPenguin.rawValue
     }
     
     // Our bee only implements one texture based animation but other classes may be more complicated

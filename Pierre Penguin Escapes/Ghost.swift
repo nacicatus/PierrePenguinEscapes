@@ -23,6 +23,9 @@ class Ghost: SKSpriteNode, GameSprite {
         self.texture = textureAtlas.textureNamed("ghost-frown.png")
         self.runAction(fadeAnimation)
         self.alpha = 0.8
+        
+        self.physicsBody?.categoryBitMask = PhysicsCategory.enemy.rawValue
+        self.physicsBody?.collisionBitMask = ~PhysicsCategory.damagedPenguin.rawValue
     }
     
     func createAnimations() {

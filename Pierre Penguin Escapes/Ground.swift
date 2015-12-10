@@ -39,6 +39,8 @@ class Ground: SKSpriteNode, GameSprite {
         // The top right of the node is X: size.width, Y: 0
         let pointTopRight = CGPoint(x: size.width, y: 0)
         self.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointZero, toPoint: pointTopRight)
+        
+        self.physicsBody?.categoryBitMask = PhysicsCategory.ground.rawValue
     }
     
     // Build child nodes to repeat the ground texture

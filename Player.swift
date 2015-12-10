@@ -38,6 +38,10 @@ class Player: SKSpriteNode, GameSprite {
         self.physicsBody?.mass = 30
         // Prevent pierre from rotating
         self.physicsBody?.allowsRotation = false
+        
+        // Set up the physics category bit masks
+        self.physicsBody?.categoryBitMask = PhysicsCategory.penguin.rawValue
+        self.physicsBody?.contactTestBitMask = PhysicsCategory.enemy.rawValue | PhysicsCategory.ground.rawValue | PhysicsCategory.powerup.rawValue | PhysicsCategory.coin.rawValue
     }
     
     func createAnimations() {

@@ -9,7 +9,7 @@
 import SpriteKit
 
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     // Create the world as a generice SKNode
     let world = SKNode()
     let ground = Ground()
@@ -58,6 +58,9 @@ class GameScene: SKScene {
         
         // spawn star out of way
         powerUpStar.spawn(world, position: CGPoint(x: -2000, y: -2000))
+        
+        // tell SpriteKit to inform GameScene of contact events
+        self.physicsWorld.contactDelegate = self
         
     }
     
@@ -108,6 +111,33 @@ class GameScene: SKScene {
         
     }
     
+    func didBeginContact(contact: SKPhysicsContact) {
+        // Each contact has 2 bodies, we will find the penguin body and use the other to determine the type of contact
+        let otherBody: SKPhysicsBody
+        // Combine the two penguin physics categories into one bitmask using the bitwise OR operator
+        let penguinMask = PhysicsCategory.penguin.rawValue | PhysicsCategory.damagedPenguin.rawValue
+        // Use the bitwise AND operator to find the penguin
+        if (contact.bodyA.categoryBitMask * penguinMask) > 0 {
+            // bodyA is the penguin
+            otherBody = contact.bodyB
+        } else {
+            otherBody = contact.bodyA
+        }
+        // Find the type of contact
+        switch otherBody.categoryBitMask {
+        case PhysicsCategory.ground.rawValue:
+            print("hit the ground")
+        case PhysicsCategory.enemy.rawValue:
+            print("take damage")
+        case PhysicsCategory.coin.rawValue:
+            print("collect a coin")
+        case PhysicsCategory.powerup.rawValue:
+            print("start power up")
+        default:
+            print("contact with no game logic")
+        }
+    }
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for touch in touches {
             // find location of the touch
@@ -136,3 +166,15 @@ class GameScene: SKScene {
     }
     
 }
+
+enum PhysicsCategory:UInt32 {
+    case penguin = 1
+    case damagedPenguin = 2
+    case ground = 4
+    case enemy = 8
+    case coin = 16
+    case powerup = 32
+}
+
+
+
