@@ -10,6 +10,9 @@ import Foundation
 import SpriteKit
 
 class Player: SKSpriteNode, GameSprite {
+    
+// ------- Here is a set of constants we will use later ------
+    
     var textureAtlas: SKTextureAtlas = SKTextureAtlas(named: "pierre.atlas")
     // Pierre's animations
     var flyAnimation = SKAction()
@@ -34,6 +37,8 @@ class Player: SKSpriteNode, GameSprite {
     var dieAnimation = SKAction()
     // stop forward velocity if player dies
     var forwardVelocity:CGFloat = 200
+    
+// -------- Here are the methods -----------
     
     func spawn(parentNode: SKNode, position: CGPoint, size: CGSize = CGSize(width: 64, height: 64)) {
         parentNode.addChild(self)
@@ -75,7 +80,48 @@ class Player: SKSpriteNode, GameSprite {
         let soarAction = SKAction.animateWithTextures(soarFrames, timePerFrame: 1)
         soarAnimation = SKAction.group([SKAction.repeatActionForever(soarAction), rotateDownAction])
         
+        // ------- Create the take damage animation--------
+        let damageStart = SKAction.runBlock {
+            // Allow the penguin to pass through enemies:
+            self.physicsBody?.categoryBitMask = PhysicsCategory.damagedPenguin.rawValue
+            // Use the bitwise NOT operator ~ to remove enemies from the collision test:
+            self.physicsBody?.collisionBitMask = ~PhysicsCategory.enemy.rawValue
+        }
+        // Create an opacity pulse, slow at first then fast at end
+        let slowFade = SKAction.sequence([SKAction.fadeAlphaTo(0.3, duration: 0.35), SKAction.fadeAlphaTo(0.7, duration: 0.35)])
+        let fastFade = SKAction.sequence([SKAction.fadeAlphaTo(0.3, duration: 0.2), SKAction.fadeAlphaTo(0.7, duration: 0.2)])
+        let fadeOutAndIn = SKAction.sequence([SKAction.repeatAction(slowFade, count: 2), SKAction.repeatAction(fastFade, count: 5)])
+        // Return the penguin to normal
+        let damageEnd = SKAction.runBlock {
+            self.physicsBody?.categoryBitMask = PhysicsCategory.penguin.rawValue
+            // Collide with everything again
+            self.physicsBody?.collisionBitMask = 0xFFFFFFFF
+            // Turn off the newly damaged flag
+            self.damaged = false
+        }
+        // Store the whole sequence in the damageAnimation property:
+        self.damageAnimation = SKAction.sequence([damageStart, fadeOutAndIn, damageEnd])
+        
+        /* --- Create the death animation --- */
+        let startDie = SKAction.runBlock {
+            // Switch to the death texture with X eyes:
+            self.texture = self.textureAtlas.textureNamed("pierre-dead.png")
+            // Suspend the penguin in space:
+            self.physicsBody?.affectedByGravity = false
+            // Stop any movement:
+            self.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+            // Make the penguin pass through everything except the ground:
+            self.physicsBody?.collisionBitMask = PhysicsCategory.ground.rawValue
+        }
+        
+        let endDie = SKAction.runBlock {
+            // Turn gravity back on:
+            self.physicsBody?.affectedByGravity = true
+        }
+        
+        self.dieAnimation = SKAction.sequence([startDie, SKAction.scaleTo(1.3, duration: 0.5), SKAction.waitForDuration(0.5), SKAction.rotateToAngle(3, duration: 1.5), endDie])
     }
+    
     
     func onTap() {
         //
@@ -142,7 +188,10 @@ class Player: SKSpriteNode, GameSprite {
     
     func takeDamage() {
         if self.invulnerable || self.damaged { return }
+        // Set the damaged state to true after being hit, and decrease the health
+        self.damaged = true
         self.health--
+        
         if self.health == 0 {
             die()
         } else {

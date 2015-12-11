@@ -117,10 +117,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Combine the two penguin physics categories into one bitmask using the bitwise OR operator
         let penguinMask = PhysicsCategory.penguin.rawValue | PhysicsCategory.damagedPenguin.rawValue
         // Use the bitwise AND operator to find the penguin
+        // This returns a positive number if body A's category
+        // is the same as either the penguin or damagedPenguin:
         if (contact.bodyA.categoryBitMask * penguinMask) > 0 {
-            // bodyA is the penguin
+            // bodyA is the penguin, we will test bodyB
             otherBody = contact.bodyB
         } else {
+            // bodyA is the penguin, we will test bodyB
             otherBody = contact.bodyA
         }
         // Find the type of contact
