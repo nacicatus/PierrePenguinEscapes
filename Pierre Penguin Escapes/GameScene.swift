@@ -90,6 +90,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         backgrounds[1].spawn(world, imageName: "Background-2", zPosition: -10, movementMultiplier: 0.5)
         backgrounds[2].spawn(world, imageName: "Background-3", zPosition: -15, movementMultiplier: 0.2)
         backgrounds[3].spawn(world, imageName: "Background-4", zPosition: -20, movementMultiplier: 0.1)
+        
+        // Play the start sound
+        self.runAction(SKAction.playSoundFileNamed("Sound/StartGame.aif", waitForCompletion: false))
     }
     
     override func didSimulatePhysics() {

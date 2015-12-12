@@ -38,6 +38,10 @@ class Player: SKSpriteNode, GameSprite {
     // stop forward velocity if player dies
     var forwardVelocity:CGFloat = 200
     
+    // sounds
+    let powerUpSound = SKAction.playSoundFileNamed("Sound/Powerup.aif", waitForCompletion: false)
+    let hurtSound = SKAction.playSoundFileNamed("Sound/Hurt.aif", waitForCompletion: false)
+    
 // -------- Here are the methods -----------
     
     func spawn(parentNode: SKNode, position: CGPoint, size: CGSize = CGSize(width: 64, height: 64)) {
@@ -157,6 +161,9 @@ SKAction.runBlock {
         ])
         // Execute the sequence:
         self.runAction(starSequence, withKey: "starPower")
+        
+        // play the power up sound
+        self.runAction(powerUpSound)
     }
     
     func onTap() {
@@ -238,5 +245,7 @@ SKAction.runBlock {
         } else {
             self.runAction(self.damageAnimation)
         }
+        // Play sound
+            self.runAction(hurtSound)
     }
 }

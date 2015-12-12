@@ -8,12 +8,14 @@
 
 import UIKit
 import SpriteKit
+import AVFoundation
 
 class GameViewController: UIViewController {
+    
+    var musicPlayer = AVAudioPlayer()
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        
         
         // Build the menu scene
         let menuScene = MenuScene()
@@ -24,6 +26,22 @@ class GameViewController: UIViewController {
         menuScene.size = view.bounds.size
         // Show the menu
         skView.presentScene(menuScene)
+        
+        // music
+        let musicUrl = NSBundle.mainBundle().URLForResource("Sound/BackgroundMusic.m4a", withExtension: nil)
+        if let url = musicUrl {
+            
+            do {
+               try
+                musicPlayer = AVAudioPlayer(contentsOfURL: url)
+                musicPlayer.numberOfLoops = -1
+                musicPlayer.prepareToPlay()
+                musicPlayer.play()
+            } catch _ {
+                
+            }
+
+        }
     }
     
     override func shouldAutorotate() -> Bool {

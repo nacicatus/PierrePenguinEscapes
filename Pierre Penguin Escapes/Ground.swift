@@ -40,7 +40,9 @@ class Ground: SKSpriteNode, GameSprite {
         let pointTopRight = CGPoint(x: size.width, y: 0)
         self.physicsBody = SKPhysicsBody(edgeFromPoint: CGPointZero, toPoint: pointTopRight)
         
+        // Hit damage
         self.physicsBody?.categoryBitMask = PhysicsCategory.ground.rawValue
+        self.physicsBody?.collisionBitMask = ~PhysicsCategory.damagedPenguin.rawValue
     }
     
     // Build child nodes to repeat the ground texture

@@ -13,6 +13,8 @@ class Coin: SKSpriteNode, GameSprite {
     var textureAtlas:SKTextureAtlas = SKTextureAtlas(named: "goods.atlas")
     var value = 1 // default for the bronze coin
     
+    let coinSound = SKAction.playSoundFileNamed("Sound/Coin.aif", waitForCompletion: false)
+    
     func spawn(parentNode: SKNode, position: CGPoint, size: CGSize=CGSize(width: 26, height: 26)) {
         parentNode.addChild(self)
         self.size = size
@@ -51,5 +53,7 @@ class Coin: SKSpriteNode, GameSprite {
         let collectSequence = SKAction.sequence([collectAnimation, resetAfterCollected])
         // Run animation
         self.runAction(collectSequence)
+        // play sound
+        self.runAction(coinSound)
     }
 }
