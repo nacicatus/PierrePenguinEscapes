@@ -32,6 +32,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //scores
     var coinsCollected = 0
+    let hud = HUD()
     
     override func didMoveToView(view: SKView) {
         // Screen center
@@ -64,6 +65,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // tell SpriteKit to inform GameScene of contact events
         self.physicsWorld.contactDelegate = self
         
+        // HUD
+        hud.createHudNodes(self.size) // create child nodes of Hud
+        self.addChild(hud) // add the HUD to the scene
+        hud.zPosition = 50 // position hud above all other elements of the game
     }
     
     override func didSimulatePhysics() {
@@ -131,16 +136,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Find the type of contact
         switch otherBody.categoryBitMask {
         case PhysicsCategory.ground.rawValue:
-            print("hit the ground")
             player.takeDamage()
+            hud.setHealthDisplay(player.health)
         case PhysicsCategory.enemy.rawValue:
             print("take damage")
             player.takeDamage()
+            hud.setHealthDisplay(player.health)
         case PhysicsCategory.coin.rawValue:
             // try to cast the otherBody's node as a coin
             if let coin = otherBody.node as? Coin {
                 coin.collect()
                 self.coinsCollected += coin.value
+                hud.setCoinCountDisplay(self.coinsCollected)
                 print(self.coinsCollected)
             }
         case PhysicsCategory.powerup.rawValue:

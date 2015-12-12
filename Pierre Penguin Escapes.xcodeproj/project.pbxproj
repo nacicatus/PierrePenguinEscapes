@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F84FB8441C1C2598006BD6CA /* hud.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F84FB8431C1C2598006BD6CA /* hud.atlas */; };
+		F84FB8461C1C26AF006BD6CA /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84FB8451C1C26AF006BD6CA /* HUD.swift */; };
 		F8C412471C195144009AD8FD /* goods.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F8C412461C195144009AD8FD /* goods.atlas */; };
 		F8C412491C195160009AD8FD /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C412481C195160009AD8FD /* Star.swift */; };
 		F8C4124B1C19539A009AD8FD /* MadFly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4124A1C19539A009AD8FD /* MadFly.swift */; };
@@ -54,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F84FB8431C1C2598006BD6CA /* hud.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = hud.atlas; sourceTree = "<group>"; };
+		F84FB8451C1C26AF006BD6CA /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HUD.swift; path = ../HUD.swift; sourceTree = "<group>"; };
 		F8C412461C195144009AD8FD /* goods.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goods.atlas; sourceTree = "<group>"; };
 		F8C412481C195160009AD8FD /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		F8C4124A1C19539A009AD8FD /* MadFly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadFly.swift; sourceTree = "<group>"; };
@@ -156,12 +160,14 @@
 				F8C412481C195160009AD8FD /* Star.swift */,
 				F8C4124A1C19539A009AD8FD /* MadFly.swift */,
 				F8C4124E1C1954EA009AD8FD /* Bat.swift */,
+				F84FB8431C1C2598006BD6CA /* hud.atlas */,
 				F8C412501C195690009AD8FD /* Ghost.swift */,
 				F8C412521C19630E009AD8FD /* Blade.swift */,
 				F8C412541C1964F5009AD8FD /* Coin.swift */,
 				F8C665431C18381900859663 /* pierre.atlas */,
 				F8C6653F1C18240D00859663 /* Ground.swift */,
 				F8C665391C181E2F00859663 /* GameSprite.swift */,
+				F84FB8451C1C26AF006BD6CA /* HUD.swift */,
 				F8C665451C18382B00859663 /* Player.swift */,
 				F8C6653B1C181EA800859663 /* Bee.swift */,
 				F8C665091C17F00100859663 /* GameViewController.swift */,
@@ -301,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8C665381C18063B00859663 /* bee.atlas in Resources */,
+				F84FB8441C1C2598006BD6CA /* hud.atlas in Resources */,
 				F8C665121C17F00100859663 /* LaunchScreen.storyboard in Resources */,
 				F8C4125E1C19784F009AD8FD /* EncounterGhosts.sks in Resources */,
 				F8C6650F1C17F00100859663 /* Assets.xcassets in Resources */,
@@ -341,6 +348,7 @@
 				F8C412531C19630E009AD8FD /* Blade.swift in Sources */,
 				F8C6653A1C181E2F00859663 /* GameSprite.swift in Sources */,
 				F8C665081C17F00100859663 /* GameScene.swift in Sources */,
+				F84FB8461C1C26AF006BD6CA /* HUD.swift in Sources */,
 				F8C412511C195690009AD8FD /* Ghost.swift in Sources */,
 				F8C665461C18382B00859663 /* Player.swift in Sources */,
 				F8C4124F1C1954EA009AD8FD /* Bat.swift in Sources */,
