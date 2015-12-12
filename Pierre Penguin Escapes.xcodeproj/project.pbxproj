@@ -12,6 +12,7 @@
 		F84FB8481C1C31FC006BD6CA /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84FB8471C1C31FC006BD6CA /* Background.swift */; };
 		F84FB84B1C1C3C6E006BD6CA /* PierrePath.sks in Resources */ = {isa = PBXBuildFile; fileRef = F84FB8491C1C3C6E006BD6CA /* PierrePath.sks */; };
 		F84FB84C1C1C3C6E006BD6CA /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F84FB84A1C1C3C6E006BD6CA /* spark.png */; };
+		F84FB84E1C1C3FBD006BD6CA /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84FB84D1C1C3FBD006BD6CA /* MenuScene.swift */; };
 		F8C412471C195144009AD8FD /* goods.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F8C412461C195144009AD8FD /* goods.atlas */; };
 		F8C412491C195160009AD8FD /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C412481C195160009AD8FD /* Star.swift */; };
 		F8C4124B1C19539A009AD8FD /* MadFly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4124A1C19539A009AD8FD /* MadFly.swift */; };
@@ -64,6 +65,7 @@
 		F84FB8471C1C31FC006BD6CA /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		F84FB8491C1C3C6E006BD6CA /* PierrePath.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PierrePath.sks; sourceTree = "<group>"; };
 		F84FB84A1C1C3C6E006BD6CA /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		F84FB84D1C1C3FBD006BD6CA /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		F8C412461C195144009AD8FD /* goods.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goods.atlas; sourceTree = "<group>"; };
 		F8C412481C195160009AD8FD /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		F8C4124A1C19539A009AD8FD /* MadFly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadFly.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		F8C664F71C17F00100859663 = {
 			isa = PBXGroup;
 			children = (
+				F84FB84D1C1C3FBD006BD6CA /* MenuScene.swift */,
 				F8C412561C196E84009AD8FD /* Encounters */,
 				F8C665021C17F00100859663 /* Pierre Penguin Escapes */,
 				F8C6651B1C17F00100859663 /* Pierre Penguin EscapesTests */,
@@ -353,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F84FB84E1C1C3FBD006BD6CA /* MenuScene.swift in Sources */,
 				F8C665401C18240D00859663 /* Ground.swift in Sources */,
 				F8C4125A1C196FAF009AD8FD /* EncounterManager.swift in Sources */,
 				F8C6653C1C181EA800859663 /* Bee.swift in Sources */,
