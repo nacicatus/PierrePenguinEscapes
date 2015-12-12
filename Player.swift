@@ -220,6 +220,11 @@ SKAction.runBlock {
         self.runAction(self.dieAnimation)
         self.flapping = false
         self.forwardVelocity = 0
+            
+        // alert the GameScene
+        if let gameScene = self.parent?.parent as? GameScene {
+        gameScene.gameOver()
+            }
     }
     
     func takeDamage() {
