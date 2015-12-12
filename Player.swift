@@ -60,6 +60,22 @@ class Player: SKSpriteNode, GameSprite {
         // Set up the physics category bit masks
         self.physicsBody?.categoryBitMask = PhysicsCategory.penguin.rawValue
         self.physicsBody?.contactTestBitMask = PhysicsCategory.enemy.rawValue | PhysicsCategory.ground.rawValue | PhysicsCategory.powerup.rawValue | PhysicsCategory.coin.rawValue
+        
+        // particle emitter
+        let dotEmitter = SKEmitterNode(fileNamed: "PierrePath.sks")
+        // place it behind the penguin
+        dotEmitter!.particleZPosition = -1
+        // make it move with the penguin
+        self.addChild(dotEmitter!)
+        // but attach them to the world
+        dotEmitter?.targetNode = self.parent
+        
+        // grant some safety at the beginning
+        self.physicsBody?.affectedByGravity = false
+        self.physicsBody?.velocity.dy = 50
+        // start gravity after a short delay
+        let startGravitySequence = SKAction.sequence([SKAction.waitForDuration(0.6), SKAction.runBlock {self.physicsBody?.affectedByGravity = true }])
+        self.runAction(startGravitySequence)
     }
     
     func createAnimations() {

@@ -10,6 +10,8 @@
 		F84FB8441C1C2598006BD6CA /* hud.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F84FB8431C1C2598006BD6CA /* hud.atlas */; };
 		F84FB8461C1C26AF006BD6CA /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84FB8451C1C26AF006BD6CA /* HUD.swift */; };
 		F84FB8481C1C31FC006BD6CA /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84FB8471C1C31FC006BD6CA /* Background.swift */; };
+		F84FB84B1C1C3C6E006BD6CA /* PierrePath.sks in Resources */ = {isa = PBXBuildFile; fileRef = F84FB8491C1C3C6E006BD6CA /* PierrePath.sks */; };
+		F84FB84C1C1C3C6E006BD6CA /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F84FB84A1C1C3C6E006BD6CA /* spark.png */; };
 		F8C412471C195144009AD8FD /* goods.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F8C412461C195144009AD8FD /* goods.atlas */; };
 		F8C412491C195160009AD8FD /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C412481C195160009AD8FD /* Star.swift */; };
 		F8C4124B1C19539A009AD8FD /* MadFly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4124A1C19539A009AD8FD /* MadFly.swift */; };
@@ -60,6 +62,8 @@
 		F84FB8431C1C2598006BD6CA /* hud.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = hud.atlas; sourceTree = "<group>"; };
 		F84FB8451C1C26AF006BD6CA /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HUD.swift; path = ../HUD.swift; sourceTree = "<group>"; };
 		F84FB8471C1C31FC006BD6CA /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		F84FB8491C1C3C6E006BD6CA /* PierrePath.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PierrePath.sks; sourceTree = "<group>"; };
+		F84FB84A1C1C3C6E006BD6CA /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		F8C412461C195144009AD8FD /* goods.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goods.atlas; sourceTree = "<group>"; };
 		F8C412481C195160009AD8FD /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		F8C4124A1C19539A009AD8FD /* MadFly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadFly.swift; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 		F8C665021C17F00100859663 /* Pierre Penguin Escapes */ = {
 			isa = PBXGroup;
 			children = (
+				F84FB8491C1C3C6E006BD6CA /* PierrePath.sks */,
+				F84FB84A1C1C3C6E006BD6CA /* spark.png */,
 				F8C4124C1C1953E4009AD8FD /* enemies.atlas */,
 				F8C665031C17F00100859663 /* AppDelegate.swift */,
 				F8C412461C195144009AD8FD /* goods.atlas */,
@@ -312,12 +318,14 @@
 				F8C665381C18063B00859663 /* bee.atlas in Resources */,
 				F84FB8441C1C2598006BD6CA /* hud.atlas in Resources */,
 				F8C665121C17F00100859663 /* LaunchScreen.storyboard in Resources */,
+				F84FB84C1C1C3C6E006BD6CA /* spark.png in Resources */,
 				F8C4125E1C19784F009AD8FD /* EncounterGhosts.sks in Resources */,
 				F8C6650F1C17F00100859663 /* Assets.xcassets in Resources */,
 				F8C6650D1C17F00100859663 /* Main.storyboard in Resources */,
 				F8C412581C196EAC009AD8FD /* EncounterBats.sks in Resources */,
 				F8C665441C18381900859663 /* pierre.atlas in Resources */,
 				F8C6653E1C1823F700859663 /* ground.atlas in Resources */,
+				F84FB84B1C1C3C6E006BD6CA /* PierrePath.sks in Resources */,
 				F8C4124D1C1953E4009AD8FD /* enemies.atlas in Resources */,
 				F8C4125C1C19775D009AD8FD /* EncounterBees.sks in Resources */,
 				F8C412471C195144009AD8FD /* goods.atlas in Resources */,
