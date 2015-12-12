@@ -10,6 +10,9 @@ import SpriteKit
 
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+    
+// ------------------- Properties go here: -------------------//
+    
     // Create the world as a generice SKNode
     let world = SKNode()
     let ground = Ground()
@@ -33,6 +36,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //scores
     var coinsCollected = 0
     let hud = HUD()
+    
+    // backgrounds
+    var backgrounds:[Background] = []
+    
+    
+    
+// -------------- Functions go here : ------------------------ //
     
     override func didMoveToView(view: SKView) {
         // Screen center
@@ -65,10 +75,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // tell SpriteKit to inform GameScene of contact events
         self.physicsWorld.contactDelegate = self
         
-        // HUD
+        // spwan HUD
         hud.createHudNodes(self.size) // create child nodes of Hud
         self.addChild(hud) // add the HUD to the scene
         hud.zPosition = 50 // position hud above all other elements of the game
+        
+        // Backgrounds
+        // instantiate 4 backgrounds in the array
+        for _ in 0...3 {
+            backgrounds.append(Background())
+        }
+        // spawn the new backgrounds
+        backgrounds[0].spawn(world, imageName: "Background-1", zPosition: -5, movementMultiplier: 0.75)
+        backgrounds[1].spawn(world, imageName: "Background-2", zPosition: -10, movementMultiplier: 0.5)
+        backgrounds[2].spawn(world, imageName: "Background-3", zPosition: -15, movementMultiplier: 0.2)
+        backgrounds[3].spawn(world, imageName: "Background-4", zPosition: -20, movementMultiplier: 0.1)
     }
     
     override func didSimulatePhysics() {
@@ -114,6 +135,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     powerUpStar.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
                 }
             }
+        }
+        
+        // Position the backgrounds
+        for background in self.backgrounds {
+            background.updatePosition(playerProgress)
         }
         
     }

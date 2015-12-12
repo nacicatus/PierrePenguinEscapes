@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F84FB8441C1C2598006BD6CA /* hud.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F84FB8431C1C2598006BD6CA /* hud.atlas */; };
 		F84FB8461C1C26AF006BD6CA /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84FB8451C1C26AF006BD6CA /* HUD.swift */; };
+		F84FB8481C1C31FC006BD6CA /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84FB8471C1C31FC006BD6CA /* Background.swift */; };
 		F8C412471C195144009AD8FD /* goods.atlas in Resources */ = {isa = PBXBuildFile; fileRef = F8C412461C195144009AD8FD /* goods.atlas */; };
 		F8C412491C195160009AD8FD /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C412481C195160009AD8FD /* Star.swift */; };
 		F8C4124B1C19539A009AD8FD /* MadFly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C4124A1C19539A009AD8FD /* MadFly.swift */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		F84FB8431C1C2598006BD6CA /* hud.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = hud.atlas; sourceTree = "<group>"; };
 		F84FB8451C1C26AF006BD6CA /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HUD.swift; path = ../HUD.swift; sourceTree = "<group>"; };
+		F84FB8471C1C31FC006BD6CA /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		F8C412461C195144009AD8FD /* goods.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goods.atlas; sourceTree = "<group>"; };
 		F8C412481C195160009AD8FD /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		F8C4124A1C19539A009AD8FD /* MadFly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadFly.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				F8C665371C18063B00859663 /* bee.atlas */,
 				F8C6650B1C17F00100859663 /* Main.storyboard */,
 				F8C6650E1C17F00100859663 /* Assets.xcassets */,
+				F84FB8471C1C31FC006BD6CA /* Background.swift */,
 				F8C665101C17F00100859663 /* LaunchScreen.storyboard */,
 				F8C665131C17F00100859663 /* Info.plist */,
 				F8C6653D1C1823F700859663 /* ground.atlas */,
@@ -353,6 +356,7 @@
 				F8C665461C18382B00859663 /* Player.swift in Sources */,
 				F8C4124F1C1954EA009AD8FD /* Bat.swift in Sources */,
 				F8C412551C1964F5009AD8FD /* Coin.swift in Sources */,
+				F84FB8481C1C31FC006BD6CA /* Background.swift in Sources */,
 				F8C6650A1C17F00100859663 /* GameViewController.swift in Sources */,
 				F8C665041C17F00100859663 /* AppDelegate.swift in Sources */,
 				F8C4124B1C19539A009AD8FD /* MadFly.swift in Sources */,
