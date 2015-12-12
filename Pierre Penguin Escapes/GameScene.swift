@@ -30,6 +30,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // power up stars
     let powerUpStar = Star()
     
+    //scores
+    var coinsCollected = 0
     
     override func didMoveToView(view: SKView) {
         // Screen center
@@ -97,7 +99,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             nextEncounterSpawnPosition += 1400
             
             // Each encounter has a 10% chance to spawn a star
-            let starRoll = Int(arc4random_uniform(10))
+            let starRoll = Int(arc4random_uniform(20))
             if starRoll == 0 {
                 if abs(player.position.x - powerUpStar.position.x) > 1200 {
                     // only move the star if it is off screen
@@ -135,12 +137,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             print("take damage")
             player.takeDamage()
         case PhysicsCategory.coin.rawValue:
-            print("collect a coin")
+            // try to cast the otherBody's node as a coin
+            if let coin = otherBody.node as? Coin {
+                coin.collect()
+                self.coinsCollected += coin.value
+                print(self.coinsCollected)
+            }
         case PhysicsCategory.powerup.rawValue:
-            print("start power up")
+            player.starPower()
         default:
             print("contact with no game logic")
         }
+        
+        
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

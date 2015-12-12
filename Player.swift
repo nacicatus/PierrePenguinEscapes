@@ -122,6 +122,26 @@ class Player: SKSpriteNode, GameSprite {
         self.dieAnimation = SKAction.sequence([startDie, SKAction.scaleTo(1.3, duration: 0.5), SKAction.waitForDuration(0.5), SKAction.rotateToAngle(3, duration: 1.5), endDie])
     }
     
+    func starPower() {
+        // Remove any existing star power-up animation, if
+        // the player is already under the power of star
+        self.removeActionForKey("starPower")
+        // Grant great forward speed:
+        self.forwardVelocity = 400
+        // Make the player invulnerable:
+        self.invulnerable = true
+        // Create a sequence to scale the player larger,
+        // wait 8 seconds, then scale back down and turn off
+        // invulnerability, returning the player to normal:
+        let starSequence = SKAction.sequence([SKAction.scaleTo(1.5, duration: 0.3), SKAction.waitForDuration(8), SKAction.scaleTo(1, duration: 1),
+SKAction.runBlock {
+        self.forwardVelocity = 200
+        self.invulnerable = false
+        }
+        ])
+        // Execute the sequence:
+        self.runAction(starSequence, withKey: "starPower")
+    }
     
     func onTap() {
         //
